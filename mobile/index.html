@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<title>支持移动设备触摸手势的jQuery图片裁剪插件|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+
+	<style>
+	#clipArea {
+		margin: 20px;
+		height: 300px;
+	}
+	#file,
+	#clipBtn {
+		margin: 20px;
+	}
+	#view {
+		margin: 0 auto;
+		width: 200px;
+		height: 200px;
+	}
+	</style>
+</head>
+<body>
+	<article class="htmleaf-container">
+		<div id="clipArea"></div>
+		<input type="file" id="file">
+		<button id="clipBtn">截取</button>
+		<div id="view"></div>
+	</article>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/iscroll-zoom.js"></script>
+	<script src="js/hammer.js"></script>
+	<script src="js/jquery.photoClip.js"></script>
+	<script src="js/jquery.rotate.min.js"></script>
+	<script src="js/exif.js"></script>
+	<script>
+	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	$("#clipArea").photoClip({
+		width: 200,
+		height: 200,
+		file: "#file",
+		view: "#view",
+		ok: "#clipBtn",
+		loadStart: function() {
+			console.log("照片读取中");
+		},
+		loadComplete: function() {
+			console.log("照片读取完成");
+		},
+		clipFinish: function(dataURL) {
+			$.ajax({
+	　　　　　　'url' : './upload.php',
+	　　　　　　'type' : 'post',
+	　　　　　　'data' : {'base64_string' : dataURL},
+	　　        'success' : function(ret){
+						//console.info(ret);
+	　　　　　   }
+	　　　　});
+			//console.log(dataURL);
+		}
+	});
+	</script>
+</body>
+</html>

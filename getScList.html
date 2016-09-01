@@ -1,0 +1,125 @@
+<!doctype html><!-- html5 doctype -->
+<!-- modernizr处理各版本IE -->
+<!--[if lt IE 7 ]>
+<html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    <!-- 字符集编码 -->
+    <meta charset="utf-8">
+    <!-- 兼容性模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- 页面标题 -->
+    <title>完善个人信息 - 高考志愿分析工具 | 海风教育 - 专注名校升学</title>
+    <link rel="stylesheet" href="https://xue.hfjy.com/html/home/libs/libs/twitter-bootstrap/2.3.2/css/bootstrap.css"/>
+    <link rel="stylesheet" href="https://xue.hfjy.com/html/home/css/evr_sytle.css">
+    <!-- 当IE 678 时 -->
+    <!--[if lt IE 9]>
+    <script src="https://xue.hfjy.com/html/home/libs/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header class="navbar-fixed-top">
+
+</header>
+<!--填补fixed-top留出的空白-->
+<header></header>
+<!--填补fixed-top留出的空白-->
+
+<!-- sweetalert js -->
+<script src="./js/jquery.js"></script>
+<script src="https://xue.hfjy.com/html/home/libs/validator/jquery.validationEngine.js"></script>
+<script src="https://xue.hfjy.com/html/home/js/evr_common.js"></script>
+<script src="https://xue.hfjy.com/html/home/js/evr_underscore.js"></script>
+<script src="https://xue.hfjy.com/html/home/js/evr_backbone.js"></script>
+<script src="https://xue.hfjy.com/html/home/js/evr_popwindow.js"></script>
+<script src="./js/evr_schoolpop.js"></script>
+<script src="https://xue.hfjy.com/html/home/js/evr_score_estimate.js"></script>
+<script src="https://xue.hfjy.com/html/home/libs/purl/2.3.1/purl.js"></script>
+<div class="page-box">
+
+<meta charset="utf-8">
+<div class="mark-pic">
+        <div class="pic-header">
+            <h3>完善个人信息</h3>
+        </div>
+        <div class="pic-page">
+        <form id="form">
+            <ul>
+                <li class="pic-title">请填写你的个人信息 , 以使我们帮助你.</li>
+                <li><em>就读中学</em><div class="auto-complete">
+                    <input type="text" id="" style="width:200px;" value="点击选择学校" class="">
+                    <input id="iprovince" type="hidden" name="province">
+                    <input id="idistrict" type="hidden" name="distr">
+                    <input id="isubdistrict" type="hidden" name="select">
+                    <input id="ischool" type="hidden" name="school">
+                    <input id="schoolId" type="hidden">
+                    <input id="areaid" type="hidden">
+                    <span class="auto-complete-search"></span>
+                </div></li>
+                
+                <li class="pic-title-1"><div class="hf btn btn-primary" id="submit">下一步</div></li>
+            </ul>
+         </form>
+        </div>
+    </div>
+</div>
+
+<!-- 初始页面弹出层 -->	
+	<div id="j_schooldisplay" class="school_pop popcon2 fn-hide">
+		<div class="popmain2 school_popmain">
+			<h2>
+				选择学校
+				<!-- <span>选择自己所在地区的学校，获得对应的课程试听</span> -->
+			</h2>
+		<div id="j_schoolpanel" class="popmain2_con">
+			<div class="school-column fn-clear">
+				<h3 class="fn-left">选择省份：</h3>
+				<div class="school-column-del j_provice"></div>
+			</div>
+			<div class="school-column fn-clear mt10">
+			<h3 class="fn-left">选择城市：</h3>
+			<div class="school-column-del j_city"></div>
+		</div>
+		<div class="school-column fn-clear mt10">
+			<h3 class="fn-left">选择区/县：</h3>
+			<div class="school-column-del j_subdistrict"></div>
+		</div>
+		<div class="school-select mt10">
+		<div class="school-select-til fn-link-blue j_search">
+			<span>
+			在
+			<b>东城区</b>
+			的学校中搜索
+			</span>
+			<input id="j_searchName" type="text">
+			<a class="j_inputSchoolName" href="javascript:;">没有我的学校?</a>
+			</div>
+			<div class="school-select-til fn-link-blue fn-hide j_input">
+			<span>
+			在
+			<b>东城区</b>
+			的学校中添加
+			</span>
+			<input id="j_inputSchoolName" type="text">
+			<a class="j_sure submitSchool">确定</a>
+			请在输入框中添加学校，或者
+			<a class="j_chooseAgain" href="javascript:;">重新选择?</a>
+		</div>
+			<div class="school-select-del fn-clear j_school"></div>
+		</div>
+		</div>
+		<div id="school_clearbox" class="mt10 textright">
+			<a class="ui-button ui-button-s ui-button-gray" href="javascript:box_clearDiv()">关闭</a>
+		</div>
+		</div>
+	</div>
+
+</body>
+</html>

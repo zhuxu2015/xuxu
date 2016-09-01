@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.7.2/jquery.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var area = new Array();
+            var cur_i = 0;
+            var school = new Array();
+            var cur_area = null;
+            $('.ul02 > li').each(function(i){
+                    var list = new Array();
+                    list['sc_name'] = $(this).find('a').text();
+                    list['sc_link'] = $(this).find('a').attr('href');
+                    
+                   /* $.post('./getJson.php',{'city':'军队院校','sc_name':list['sc_name'],'sc_link':list['sc_link']},function(data){
+                        console.info(data);
+                    })*/
+            });
+        })
+
+    </script>
+</head>
+<body>
+<div class="table-list hidden-phone" id="searchListDiv">
+<ul class="ul02">
+                                <li><a href="detail.php?article_id=81168&amp;area_id=3416" title="第三军医大学">第三军医大学</a></li><li><a href="detail.php?article_id=81167&amp;area_id=3416" title="第二炮兵工程大学">第二炮兵工程大学</a></li><li><a href="detail.php?article_id=81166&amp;area_id=3416" title="第二军医大学">第二军医大学</a></li>                            </ul>
+</div>
+</body>
+</html>

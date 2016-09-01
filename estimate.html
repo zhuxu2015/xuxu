@@ -1,0 +1,191 @@
+<!-- @top.html -->
+<!--中间部分开始 -->
+<div class="graybg ">
+  <div class="est-content">
+    <ul class="est-mian hidden-phone">
+      <li class="est-list ">
+        <img src="http://res.luqu.la/pc/images/xuanke.jpg" title="+3选科评测" alt="+3选科评测">
+        <h3>适用人群：参加浙江或上海17届以后高考的同学</h3>
+        <p>
+          物化生史地政选啥好？科学分析适合你的高考+3选课
+        </p>
+        <div class="btnBox">
+          <a target="_blank" class="btn btnbg" id="school">立即测试</a>
+          <a href="estDetail.html" target="_blank" class=" btn no-mar ">详细介绍</a>
+        </div>
+      </li>
+      <li class="est-list">
+        <img src="http://res.luqu.la/pc/images/zhuanye.jpg" title="专业倾向测试" alt="专业倾向测试">
+        <h3>适用人群：高考升学有填报志愿需求的同学</h3>
+        <p>
+          科学识别性格特征，轻松找到你擅长的专业职业。
+        </p>
+        <div class="btnBox">
+          <a href="https://xue.hfjy.com/html/home/stu_diag_professional.html?type=0" target="_blank" class="btn btnbg">立即测试</a>
+          <a href="estDetail.html" target="_blank" class=" btn no-mar ">详细介绍</a>
+        </div>
+      </li>
+      <li class="est-list no-maR">
+        <img src="http://res.luqu.la/pc/images/wenli.jpg" title="文理评测" alt="文理评测">
+        <h3>适用人群：除3+3选科以外参加全国高考的同学</h3>
+        <p>
+          选文科还是选理科？科学分析帮你选对文理
+        </p>
+        <div class="btnBox">
+          <a href="estDetail.html" target="_blank" class="btn btnbg">立即测试</a>
+          <a href="estDetail.html" target="_blank" class=" btn no-mar ">详细介绍</a>
+        </div>
+      </li>
+      <li class="est-list ">
+        <img src="http://res.luqu.la/pc/images/gaokao.jpg" title="文理评测" alt="文理评测">
+        <h3>适用人群：上海、浙江、江苏（高一至高三学生）</h3>
+        <p>
+          物化生史地政选啥好？科学分析适合你的高考+3选课
+        </p>
+        <div class="btnBox">
+          <a href="javascript:;" target="_blank" class="btns ">敬请期待</a>
+        </div>
+      </li>
+      <li class="est-list ">
+        <img src="http://res.luqu.la/pc/images/xueke.jpg" title="文理评测" alt="文理评测">
+        <h3>适用人群：上海、浙江、江苏（高一至高三学生）</h3>
+        <p>
+          物化生史地政选啥好？科学分析合适你的高考+3选科
+        </p>
+        <div class="btnBox">
+          <a href="javascript:;" target="_blank" class="btns">敬请期待</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div style="clear: both">
+  </div>
+</div>
+
+<!--学校弹出层开始-->
+<link rel="stylesheet" href="https://xue.hfjy.com/html/home/libs/libs/twitter-bootstrap/2.3.2/css/bootstrap.css"/>
+<link rel="stylesheet" href="https://xue.hfjy.com/html/home/css/evr_sytle.css">
+<script src="https://xue.hfjy.com/html/home/js/jquery.js"></script>
+<script src="https://xue.hfjy.com/html/home/libs/validator/jquery.validationEngine.js"></script>
+<script src="https://xue.hfjy.com/html/home/js/evr_common.js"></script>
+<script src="https://xue.hfjy.com/html/home/js/evr_underscore.js"></script>
+<script src="https://xue.hfjy.com/html/home/js/evr_backbone.js"></script>
+<script src="https://xue.hfjy.com/html/home/js/evr_popwindow.js"></script>
+<script src="https://xue.hfjy.com/html/home/js/evr_schoolpop.js"></script>
+<script src="https://xue.hfjy.com/html/home/js/evr_score_estimate.js"></script>
+<script src="https://xue.hfjy.com/html/home/libs/purl/2.3.1/purl.js"></script>
+<script type="text/javascript">
+
+</script>
+
+  <div id="j_schooldisplay" class="school_pop popcon2 fn-hide">
+    <div class="popmain2 school_popmain">
+      <h2>
+        选择学校
+        <!-- <span>选择自己所在地区的学校，获得对应的课程试听</span> -->
+      </h2>
+    <div id="j_schoolpanel" class="popmain2_con">
+      <div class="school-column fn-clear">
+        <h3 class="fn-left">选择省份：</h3>
+        <div class="school-column-del j_provice"></div>
+      </div>
+      <div class="school-column fn-clear mt10">
+      <h3 class="fn-left">选择城市：</h3>
+      <div class="school-column-del j_city"></div>
+    </div>
+    <div class="school-column fn-clear mt10">
+      <h3 class="fn-left">选择区/县：</h3>
+      <div class="school-column-del j_subdistrict"></div>
+    </div>
+    <div class="school-select mt10">
+    <div class="school-select-til fn-link-blue j_search">
+      <span>
+      在
+      <b>东城区</b>
+      的学校中搜索
+      </span>
+      <input id="j_searchName" type="text">
+      <a class="j_inputSchoolName" href="javascript:;">没有我的学校?</a>
+      </div>
+      <div class="school-select-til fn-link-blue fn-hide j_input">
+      <span>
+      在
+      <b>东城区</b>
+      的学校中添加
+      </span>
+      <input id="j_inputSchoolName" type="text">
+      <a class="j_sure submitSchool">确定</a>
+      请在输入框中添加学校，或者
+      <a class="j_chooseAgain" href="javascript:;">重新选择?</a>
+    </div>
+      <div class="school-select-del fn-clear j_school"></div>
+    </div>
+    </div>
+    <div id="school_clearbox" class="mt10 textright">
+      <a class="ui-button ui-button-s ui-button-gray" href="javascript:box_clearDiv()">关闭</a>
+    </div>
+    </div>
+  </div>
+<!--学校弹出层结束-->
+
+
+<!-- 手机端 -->
+<div class="mobile-content visible-phone">
+  <ul class="est-mian ">
+    <li class="est-list ">
+    <img src="http://res.luqu.la/pc/images/xuanke.jpg" title="+3选科评测" alt="+3选科评测">
+    <h3>适用人群：参加浙江或上海17届以后高考的同学</h3>
+    <p>
+      物化生史地政选啥好？科学分析适合你的高考+3选课
+    </p>
+    <div class="btnBox">
+      <a href="evaluation.html" target="_blank" class="btn btnbg ">立即测试</a>
+      <a href="estDetail.html" target="_blank" class=" btn no-mar ">详细介绍</a>
+    </div>
+    </li>
+    <li class="est-list">
+    <img src="http://res.luqu.la/pc/images/zhuanye.jpg" title="专业倾向测试" alt="专业倾向测试">
+    <h3>适用人群：高考升学有填报志愿需求的同学</h3>
+    <p>
+      科学识别性格特征，轻松找到你擅长的专业职业。
+    </p>
+    <div class="btnBox">
+      <a href="https://xue.hfjy.com/html/home/stu_diag_professional.html?type=0" target="_blank" class="btn btnbg ">立即测试</a>
+      <a href="estDetail.html" target="_blank" class=" btn no-mar ">详细介绍</a>
+    </div>
+    </li>
+    <li class="est-list no-maR">
+    <img src="http://res.luqu.la/pc/images/wenli.jpg" title="文理评测" alt="文理评测">
+    <h3>适用人群：除3+3选科以外参加全国高考的同学</h3>
+    <p>
+      选文科还是选理科？科学分析帮你选对文理
+    </p>
+    <div class="btnBox">
+      <a href="estDetail.html" target="_blank" class="btn btnbg">立即测试</a>
+      <a href="estDetail.html" target="_blank" class=" btn no-mar ">详细介绍</a>
+    </div>
+    </li>
+    <li class="est-list ">
+    <img src="http://res.luqu.la/pc/images/gaokao.jpg" title="文理评测" alt="文理评测">
+    <h3>适用人群：上海、浙江、江苏（高一至高三学生）</h3>
+    <p>
+      物化生史地政选啥好？科学分析适合你的高考+3选课
+    </p>
+    <div class="btnBox">
+      <a href="javascript:;" target="_blank" class="btns ">敬请期待</a>
+    </div>
+    </li>
+    <li class="est-list ">
+    <img src="http://res.luqu.la/pc/images/xueke.jpg" title="文理评测" alt="文理评测">
+    <h3>适用人群：上海、浙江、江苏（高一至高三学生）</h3>
+    <p>
+      物化生史地政选啥好？科学分析合适你的高考+3选科
+    </p>
+    <div class="btnBox">
+      <a href="javascript:;" target="_blank" class="btns">敬请期待</a>
+    </div>
+    </li>
+  </ul>
+</div>
+
+<!-- @foot.html -->
